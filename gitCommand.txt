@@ -1,0 +1,35 @@
+First initialize git for your project : git init
+check status : git status
+create new file : touch filename.ext
+see list of file in directory : ls
+see file content : cat filename.ext
+
+to add to stage : git add .   : => add all the file to the stage
+			git add filename.ext  : => add specific file to the stage
+
+to remove from the stage : git restore -- staged filename
+
+finally save the history or say commit it : git commit -m "message"
+
+get all the commit made in history : git log
+
+to delete a file : rm -rf filename.ext
+
+=> git log saves all the commit on top of each other with hash ids, so we can jump back to previous version of the project
+   by restoring the project to the desired commit with the help of it's hash ID, below is sample 
+	git reset asldfkjaslfjksalfh
+=> doing above will remove all the commit above the used commit
+
+=> if we wish to save changes but don't want to commit now and call it later to commit
+   we can do that by first adding changes to stage and then send it bcakstage for later call or no call 
+   for that stash command is used : git stash
+=> doing above will push all the changes backstage and project comes back to previous state 
+=> when we want to restage the backstaged file simply type : git stash pop
+=> to delete the backstaged file type : git stash clear
+
+---------- GITHUB----------
+
+=> when we want to connect our repository to git we simply copy the url and add to the git
+command : git remote add origin link
+remote shows that we are working with urls
+origin is the name for the url, it's a convention to choose this name for the personal account
